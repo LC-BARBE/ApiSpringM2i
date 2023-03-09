@@ -1,0 +1,46 @@
+{
+  "songs": [
+    {
+      "rank": 1,
+      "title": "Like a Rolling Stone",
+      "artist": "Bob Dylan",
+      "album": "Highway 61 Revisited",
+      "year": "1965"
+    },
+    {
+      "rank": 2,
+      "title": "(I Can't Get No) Satisfaction",
+      "artist": "The Rolling Stones",
+      "album": "Out of Our Heads",
+      "year": "1965"
+    },
+    {
+      "rank": 3,
+      "title": "Imagine",
+      "artist": "John Lennon",
+      "album": "Imagine",
+      "year": "1971"
+    },
+    {
+      "rank": 4,
+      "title": "What's Going On",
+      "artist": "Marvin Gaye",
+      "album": "What's Going On",
+      "year": "1971"
+    },
+    {
+      "rank": 5,
+      "title": "Respect",
+      "artist": "Aretha Franklin",
+      "album": "I Never Loved a Man the Way I Love You",
+      "year": "1967"
+    },
+    {
+      "rank": 6,
+      "title": "Good Vibrations",
+      "artist": "The Beach Boys",
+      "album": "Smiley Smile/Wild Honey",
+      "year": "1966"
+    }
+  ]
+}
