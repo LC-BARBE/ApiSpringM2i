@@ -33,7 +33,17 @@ public class songController {
         } catch (Exception e) {
             return ResponseEntity.ok(HttpStatus.NOT_ACCEPTABLE);
         }
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok(HttpStatus.CREATED);
     }
 
+    @PostMapping("/delete")
+    @ResponseBody
+    public ResponseEntity rmSong(@RequestBody String request) throws JsonProcessingException {
+        try {
+            SongList.rmSong(JsonService.serializeSong(request));
+        } catch (Exception e) {
+            return ResponseEntity.ok(HttpStatus.NOT_ACCEPTABLE);
+        }
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
 }

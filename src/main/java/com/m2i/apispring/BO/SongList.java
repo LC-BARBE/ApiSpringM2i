@@ -1,5 +1,7 @@
 package com.m2i.apispring.BO;
 
+import com.m2i.apispring.Service.JsonService;
+
 import java.util.ArrayList;
 
 public abstract class SongList extends ArrayList<Song> {
@@ -14,9 +16,13 @@ public abstract class SongList extends ArrayList<Song> {
         songList = sgList;
     }
 
-    public static void addSong(Song song) {
-        songList.add(song);
-        songList.get(songList.indexOf(song)).setRank(songList.indexOf(song)+1);
+    public static Boolean addSong(Song song) {
+        if (!songList.contains(song)) {
+            songList.add(song);
+            songList.get(songList.indexOf(song)).setRank(songList.indexOf(song) + 1);
+            return true;
+        }
+        return false;
     }
 
     public static Song getSongByRank(int rank) {
@@ -28,7 +34,13 @@ public abstract class SongList extends ArrayList<Song> {
         return null;
     }
 
-    public static void rmSong(Song song) {
-        songList.remove(song);
+    public static Boolean rmSong(Song song) {
+        for (Song sg : songList) {
+            if (sg.rank == song.rank) {
+                songList.remove(sg);
+                return true;
+            }
+        }
+        return false;
     }
 }
