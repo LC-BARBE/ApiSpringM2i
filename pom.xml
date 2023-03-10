@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.m2i</groupId>
-    <artifactId>ApiSpring</artifactId>
+    <artifactId>ApiSpringM2i</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ApiSpring</name>
     <description>ApiSpring</description>

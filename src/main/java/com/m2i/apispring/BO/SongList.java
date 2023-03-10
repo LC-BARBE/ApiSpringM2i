@@ -43,4 +43,17 @@ public abstract class SongList extends ArrayList<Song> {
         }
         return false;
     }
+
+    public static Boolean upDateSong(Song song) {
+        for (Song sg : songList) {
+            if (sg.rank == song.rank) {
+                sg.setArtist(song.artist);
+                sg.setAlbum(song.album);
+                sg.setTitle(song.title);
+                sg.setYear(song.year);
+                return true;
+            }
+        }
+        return false;
+    }
 }

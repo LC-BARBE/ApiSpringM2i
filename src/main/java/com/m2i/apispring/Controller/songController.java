@@ -27,7 +27,7 @@ public class songController {
 
     @PostMapping("/create")
     @ResponseBody
-    public ResponseEntity addSong(@RequestBody String request) throws JsonProcessingException {
+    public ResponseEntity addSong(@RequestBody String request) {
         try {
             SongList.addSong(JsonService.serializeSong(request));
         } catch (Exception e) {
@@ -36,9 +36,9 @@ public class songController {
         return ResponseEntity.ok(HttpStatus.CREATED);
     }
 
-    @PostMapping("/delete")
+    @DeleteMapping("/delete")
     @ResponseBody
-    public ResponseEntity rmSong(@RequestBody String request) throws JsonProcessingException {
+    public ResponseEntity rmSong(@RequestBody String request) {
         try {
             SongList.rmSong(JsonService.serializeSong(request));
         } catch (Exception e) {
@@ -46,4 +46,17 @@ public class songController {
         }
         return ResponseEntity.ok(HttpStatus.OK);
     }
+
+    @PutMapping("/update")
+    @ResponseBody
+    public ResponseEntity updateSong(@RequestBody String request) {
+        try {
+            SongList.upDateSong(JsonService.serializeSong(request));
+        } catch (Exception e) {
+            return ResponseEntity.ok(HttpStatus.NOT_ACCEPTABLE);
+        }
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+
 }
